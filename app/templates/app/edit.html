@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertpage</title>
+    <style>
+        .sec{
+            background-color: whitesmoke;
+            height:415px;
+            width:500px;
+            box-shadow: 5px 5px 5px whitesmoke;
+            border-radius: 10px;
+            
+        }
+        .for{
+            padding-top: 15px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .in{
+            height:30px;
+            width:250px;
+            border-radius: 10px;
+        }
+        .bu{
+            height:30px;
+            width:80px;
+            background-color:blue ;
+            color:white;
+            border-radius:5px ;
+        }
+       
+    </style>
+</head>
+
+<body style="background-color: black; padding-top: 60px;">
+    <center>
+        <section class="sec">
+            {% if key2 %}
+            <form action="{% url 'sas' pk=key2.id %}" method="post">
+                {% csrf_token %}
+                <h1 style="padding-top: 15px;">Update Page</h1>
+                <table>
+                    <tr>
+                        <td><input class="in" type="text" name="fname" placeholder="Firstname" value="{{key2.Firstname}}"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="in" type="text" name="lname" placeholder="Lastname" value="{{key2.Lastname}}"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="in" type="email" name="email" placeholder="Email" value="{{key2.Email}}"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="in" type="tel" name="contact" placeholder="Contact" value="{{key2.Contact}}"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="bu" type="submit" value="Update"></td>
+                    </tr>
+                </table>
+            </form>
+            {% endif %}
+            
+            <!-- SVG Icons -->
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                <path fill="#fff" d="M4.868,43.303..."></path>
+                <path fill="#fff" d="M4.868,43.803..."></path>
+                <path fill="#cfd8dc" d="M24.014,5..."></path>
+                <path fill="#40c351" d="M35.176,12.832..."></path>
+                <path fill="#fff" d="M19.268,16.045..."></path>
+            </svg>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="31" viewBox="0 0 48 48">
+                <path class="st0" d="M41.67,13.48..."></path>
+                <path class="st1" d="M42,16v0.27..."></path>
+                <path class="st2" d="M42,16v4.41..."></path>
+                <path class="st3" d="M42,18.37v4.54..."></path>
+            </svg>
+        </section>
+    </center>
+</body>
+
+
+</html>

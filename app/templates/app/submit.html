@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form</title>
+    <style>
+        .bo{
+            background-color: black;
+            border: 20px solid lightblue;
+            border-top: none;
+            color:white;
+            /*padding: 250px;*/
+            padding-bottom: 450px;
+            
+        }
+        p{
+            padding-left:25%;
+            padding-right:25%;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .b{
+            height: 30px;
+            width:200px;
+            background-color:blue ;
+            box-shadow: 2px 2px 2px white;
+            color:white;
+        }
+        a{
+            text-decoration:none;
+            color:white;
+        }
+    
+    </style>
+</head>
+<body class="bo">
+<center>
+    <p align="justify">Thank You! for Submitting the Form we Will revirew the form and get back to you soon</p>
+    <button class="b"><a href="{% url 'show' %}">Check Yor Details Hear</a></button>
+</center>
+</body>
+</html>
