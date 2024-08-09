@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year App</title>
+    <style>
+        .body{
+            background-color: black;
+            padding-top: 50px;
+
+        }
+        h1{
+            color:black;
+        }
+        div{
+            height:400px;
+            width:400px;
+            background-color: whitesmoke;
+            padding-top: 30px;
+            border: 2px inset blue;
+            border-radius: 7px;
+            box-shadow: 3px 5px 5px whitesmoke;
+        }
+        a{
+            text-decoration: None;
+            cursor: col-resize;
+            color: black;
+
+        }
+        a:hover{
+            color:white;
+        }
+       
+        .input{
+            height:30px;
+            width: 260px;
+            border:2px solid black;
+            border-radius: 2px;
+        }
+        .m{
+            height:30px;
+            width:80px;
+            background-color: blue;
+            color: whitesmoke;
+            
+        }
+        button{
+            height:30px;
+            width: 120px;
+    
+            margin-top: none;
+            margin:10px;
+            background-color: green;
+        }
+
+
+    </style>
+</head>
+<body class="body">
+<center>
+    <div>
+    <h1>Checking Student born in Leap year or not</h1>
+    <form action="{% url 'che' %}" method="post">
+        {% csrf_token %}
+        <input class="input" type="text" name="year"  value="{{year}}"placeholder="Enter Year"><br><br>
+        <input class="m" type="submit" value="Check" name="ope"><br><br>
+        <input  class="input" type="text" placeholder="Enter Year to check" value="{{re}}"><br><br>
+        <button><a href="{% url 'score' %}">student app</a></button>
+        <button><a href="{% url 'mary' %}">marriage app</a></button>
+
+
+        
+    </form>
+    </div>
+</center>
+</body>
+</html>

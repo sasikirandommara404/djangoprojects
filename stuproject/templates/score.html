@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score app</title>
+    <style>
+        body{
+            background-color: black;
+            padding-top: 50px;
+
+        }
+        h1{
+            color:black;
+        }
+        div{
+            height:450px;
+            width:400px;
+            background-color: whitesmoke;
+            padding-top: 10px;
+            border: 2px inset blue;
+            border-radius: 7px;
+            box-shadow: 3px 5px 5px whitesmoke;
+        }
+        a{
+            text-decoration: None;
+            cursor: col-resize;
+            color: black;
+
+        }
+        a:hover{
+            color:white;
+        }
+       
+        .input{
+            height:30px;
+            width: 260px;
+            border:2px solid black;
+            border-radius: 2px;
+        }
+        .m{
+            height:30px;
+            width:80px;
+            background-color: blue;
+            color: whitesmoke;
+            
+        }
+        button{
+            height:30px;
+            width: 80px;
+    
+            margin-top: none;
+            margin:10px;
+            background-color: green;
+        }
+
+
+    </style>
+</head>
+<body>
+<center>
+    <div>
+    <h1>Student Score Checker</h1>
+    <form action="{% url 'score1' %}" method="post">
+        {% csrf_token %}
+        <input class="input" type="text"  value ="{{python}}"name="python" placeholder="Enter Python marks"><br><br>
+        <input class="input"  type="text" value="{{mysql}}"name="MySQL" placeholder="Enter MySQL marks"><br><br>
+        <input class="input"  type="text" value="{{django}}"name=Djnago placeholder="Enter Django marks"><br><br>
+        <input class="input" type="text"value="{{web}}" name="Webtech" placeholder="Enter Webtech marks"><br><br>
+        <input  class="m" type="submit" value="Total" name="ope">
+        <input class="m" type="submit" value="Percentage" name="ope">
+        <input class="m" type="submit" value="Grade" name="ope">
+        <input class="m" type="submit" value="Status" name="ope"><br><br>
+        <input  class="input" type="text" value="{{re}}" placeholder="enter data to know result"><br><br>
+
+        <button><a href="{% url 'leap' %}">leap app</a></button>
+        <button style="width: 120px;"><a href="{% url 'mary' %}">marriage app</a></button>
+
+
+        
+    </form>
+    </div>
+</center>
+</body>
+</html>
